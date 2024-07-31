@@ -1,0 +1,33 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "553b7a18fbd76bb12cb209cc9de2140e"
+name = "checkout app"
+handle = "checkout-app-705"
+application_url = "https://doing-kinda-developers-concepts.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "tellos-development.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "customer_read_draft_orders,customer_read_markets,customer_read_orders,customer_read_store_credit_accounts,customer_write_customers,unauthenticated_read_customer_tags,unauthenticated_write_checkouts,unauthenticated_write_customers,write_cart_transforms,write_customers,write_draft_orders,write_orders"
+
+[auth]
+redirect_urls = [
+  "https://doing-kinda-developers-concepts.trycloudflare.com/auth/callback",
+  "https://doing-kinda-developers-concepts.trycloudflare.com/auth/shopify/callback",
+  "https://doing-kinda-developers-concepts.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-07"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/uninstalled" ]
+  uri = "/webhooks"
+
+[pos]
+embedded = false
