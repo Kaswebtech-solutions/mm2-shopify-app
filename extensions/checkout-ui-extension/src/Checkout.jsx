@@ -13,8 +13,7 @@ const orderDetailsBlock = reactExtension("customer-account.order-status.block.re
 export { orderDetailsBlock };
 
 function Attribution() {
-  const email = useEmail();
-  console.log(email);
+  // const email = useEmail();
 
   return (
     <>
@@ -24,8 +23,7 @@ function Attribution() {
 }
 
 function ProductReview() {
-  const email = useEmail();
-  console.log(email);
+  // const email = useEmail();
 
   return (
     <>
