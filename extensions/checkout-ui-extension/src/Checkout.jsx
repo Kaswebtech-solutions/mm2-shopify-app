@@ -6,23 +6,13 @@ import {
 } from '@shopify/ui-extensions-react/checkout';
 import React from 'react';
 
-const thankYouBlock = reactExtension("purchase.thank-you.block.render", () => <Attribution />);
+const thankYouBlock = reactExtension("purchase.thank-you.block.render", () => <ExtensionRender />);
 export { thankYouBlock };
 
-const orderDetailsBlock = reactExtension("customer-account.order-status.block.render", () => <ProductReview />);
+const orderDetailsBlock = reactExtension("customer-account.order-status.block.render", () => <ExtensionRender />);
 export { orderDetailsBlock };
 
-function Attribution() {
-  // const email = useEmail();
-  const {url: ButtonUrl} = useSettings();
-  return (
-    <>
-      <Button to='https://mm2.land/' className='custom-button'>CLAIM ORDER</Button>
-    </>
-  );
-}
-
-function ProductReview() {
+function ExtensionRender() {
   // const email = useEmail();
   const {url: buttonurl} = useSettings();
   const url = buttonurl ?? 'https://mm2.land/';
