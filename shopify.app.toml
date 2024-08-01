@@ -3,7 +3,7 @@
 client_id = "553b7a18fbd76bb12cb209cc9de2140e"
 name = "checkout app"
 handle = "checkout-app-705"
-application_url = "https://doing-kinda-developers-concepts.trycloudflare.com"
+application_url = "https://forgotten-divide-ed-bench.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "customer_read_draft_orders,customer_read_markets,customer_read_orders,
 
 [auth]
 redirect_urls = [
-  "https://doing-kinda-developers-concepts.trycloudflare.com/auth/callback",
-  "https://doing-kinda-developers-concepts.trycloudflare.com/auth/shopify/callback",
-  "https://doing-kinda-developers-concepts.trycloudflare.com/api/auth/callback"
+  "https://forgotten-divide-ed-bench.trycloudflare.com/auth/callback",
+  "https://forgotten-divide-ed-bench.trycloudflare.com/auth/shopify/callback",
+  "https://forgotten-divide-ed-bench.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
@@ -27,7 +27,7 @@ api_version = "2024-07"
 
   [[webhooks.subscriptions]]
   topics = [ "app/uninstalled" ]
-  uri = "/webhooks"
+  uri = "https://violent-themselves-bermuda-assessment.trycloudflare.com/webhooks"
 
 [pos]
 embedded = false
