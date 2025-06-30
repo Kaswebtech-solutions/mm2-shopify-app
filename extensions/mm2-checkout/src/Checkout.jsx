@@ -20,7 +20,7 @@ function ExtensionThankuRender() {
   let orderId = data.orderConfirmation.current.order.id;
   orderId = orderId.match(/(\d+)$/)[0];
   const { url: buttonurl } = useSettings();
-  const baseUrl = buttonurl ?? 'https://claim.mm2.land/';
+  const baseUrl = buttonurl ?? 'https://bloxxer.gg/';
   const url = `${baseUrl}?order=${orderId}&email=${email}`;
   return (
     <>
@@ -45,7 +45,7 @@ function ExtensionOrderRender() {
   let orderId = data.order.current.id;
   orderId = orderId.match(/(\d+)$/)[0];
   const { url: buttonurl } = useSettings();
-  const baseUrl = buttonurl ?? 'https://claim.mm2.land/';
+  const baseUrl = buttonurl ?? 'https://bloxxer.gg/';
   const url = `${baseUrl}?order=${orderId}&email=${email}`;
   return (
     <>
