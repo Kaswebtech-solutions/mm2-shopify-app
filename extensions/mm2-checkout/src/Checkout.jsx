@@ -45,7 +45,7 @@ function ExtensionOrderRender() {
   let orderId = data.order.current.id;
   orderId = orderId.match(/(\d+)$/)[0];
   const { url: buttonurl } = useSettings();
-  const baseUrl = buttonurl ?? ' https://claim.bloxxer.gg/';
+  const baseUrl = buttonurl ?? ' https://claim.bloxxer.gg/'; 
   const url = `${baseUrl}?order=${orderId}&email=${email}`;
   return (
     <>
